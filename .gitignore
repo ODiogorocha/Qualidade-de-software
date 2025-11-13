@@ -1,0 +1,58 @@
+# Ambiente virtual
+.venv/
+venv/
+env/
+
+# Cache e compilados do Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Arquivos de configuração do VSCode, PyCharm, etc.
+.vscode/
+.idea/
+
+# Arquivos temporários ou locais
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Arquivos CSV e bases de dados locais
+*.csv
+*.db
+*.sqlite
+*.sqlite3
+
+# Arquivos de modelo e aprendizado
+modelo_registro.csv
+dbaprendizadoativo_maos.csv
+dbtrucoimitacao_maos.csv
+dbtrucocbr_maos.csv
+jogadas.csv
+
+# Arquivos binários e compactados
+*.zip
+*.png
+*.jpg
+*.jpeg
+*.pdf
+
+# Requisitos e pacotes
+requirements.txt
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de testes temporários
+tests/__pycache__/
+*.pytest_cache/
+.coverage
+htmlcov/
+ **/__pycache__/
+*.pyc
+.~lock.dbtrucoimitacao_maos.csv#
+jogadas.csv

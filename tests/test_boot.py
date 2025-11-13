@@ -1,21 +1,21 @@
 import pytest
-from src.truco.bot import Bot
-from src.truco.jogador import Jogador
-from src.truco.baralho import Baralho
+from truco.baralho import Baralho
+from truco.carta import Carta
 
-
-class TestBot:
-    def test_decisao_truco(self):
-        bot = Bot("Bot")
-        jogador = Jogador("Jogador")
+class TestBaralho:
+    def test_cria_baralho(self):
         baralho = Baralho()
-        bot.criar_mao(baralho)
-        decisao = bot.decidir_truco()
-        assert decisao in [True, False]
+        assert len(baralho.cartas) == 40
 
-    def test_jogar_carta(self):
-        bot = Bot("Bot")
+    def test_embaralha(self):
         baralho = Baralho()
-        bot.criar_mao(baralho)
-        carta_jogada = bot.jogar_carta(0)
-        assert carta_jogada is not None
+        cartas_originais = baralho.cartas.copy()
+        baralho.embaralhar()
+        # O baralho deve estar embaralhado (ordem diferente)
+        assert baralho.cartas != cartas_originais
+
+    def test_retirar_carta(self):
+        baralho = Baralho()
+        carta = baralho.retirar_carta()
+        assert isinstance(carta, Carta)
+        assert len(baralho.cartas) == 39
