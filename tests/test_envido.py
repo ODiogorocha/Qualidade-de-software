@@ -14,7 +14,7 @@ class TestEnvido:
 
     def test_aumentar_envido(self):
         e = Envido()
-        if e.quem_real_envido or e.quem_falta_envido:
+        if e.quem_real_envido or e.quem_falta_envido: 
             assert True
 
 
