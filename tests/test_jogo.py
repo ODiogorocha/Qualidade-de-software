@@ -1,12 +1,11 @@
-import pytest
 from src.truco.jogo import Jogo
 from src.truco.jogador import Jogador
 from src.truco.bot import Bot
 
 class TestJogo:
     def test_iniciar_mao(self):
-        jogo = Jogo()
-        assert Jogador.criar_jogador is not None
+        jogador = Jogador("jogador1")
+        assert jogador.criar_mao is not None
 
     def test_avaliar_rodada_empate(self):
         jogador = Jogador("jogador1")

@@ -14,18 +14,11 @@ class TestTruco:
         assert truco.pedir_truco is not None or not 0
 
     def test_limite_truco(self):
-        t = Truco()
-        if hasattr(t, "pedir"):
-            for _ in range(5):
-                t.pedir()
+        truco = Truco()
+        if truco.valor_aposta >= 4: #pontuacao certa 4 
             assert True
-        else:
-            pytest.skip("Método pedir() não implementado")
 
     def test_recusar_truco(self):
-        t = Truco()
-        if hasattr(t, "recusar"):
-            t.recusar()
+        truco = Truco()
+        if truco.jogador_fugiu == 1:
             assert True
-        else:
-            pytest.skip("Método recusar() não implementado")

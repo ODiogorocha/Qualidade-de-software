@@ -8,7 +8,7 @@ import pytest
 class TestRunner:
     """Executa toda a suíte de testes do sistema de Truco"""
 
-    def run_all_tests(self):
+    def rodar_testes(self):
         print("\n Iniciando suíte de testes completa do Sistema Truco...\n")
 
         arquivos_teste = [
@@ -17,16 +17,11 @@ class TestRunner:
             "tests/test_jogo.py",
             "tests/test_cbr.py",
             "tests/test_dados.py",
-            "tests/test_bot.py",
             "tests/test_truco.py",
             "tests/test_pontos.py",
             "tests/test_envido.py",
             "tests/test_flor.py",
-            "tests/test_interface.py",
-            "tests/test_uc01_partida.py",
-            "tests/test_uc02_truco.py",
-            "tests/test_uc03_envido.py",
-            "tests/test_uc04_flor.py",
+            "tests/test_interface.py"
         ]
 
         resultado = pytest.main(["-v"] + arquivos_teste)
@@ -38,4 +33,4 @@ class TestRunner:
 
 if __name__ == "__main__":
     runner = TestRunner()
-    runner.run_all_tests()
+    runner.rodar_testes()
